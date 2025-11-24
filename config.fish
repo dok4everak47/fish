@@ -21,6 +21,20 @@ if status is-interactive
 
 	abbr -a vi nvim
 
+
+	# >>> conda initialize >>>
+	# !! Contents within this block are managed by 'conda init' !!
+	if test -f /home/dok4ever/miniforge3/bin/conda
+    	eval /home/dok4ever/miniforge3/bin/conda "shell.fish" "hook" $argv | source
+	else
+    	if test -f "/home/dok4ever/miniforge3/etc/fish/conf.d/conda.fish"
+        	. "/home/dok4ever/miniforge3/etc/fish/conf.d/conda.fish"
+    	else
+        	set -x PATH "/home/dok4ever/miniforge3/bin" $PATH
+    	end
+	end
+	# <<< conda initialize <<<
+
 end
 
 
